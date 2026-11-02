@@ -21,6 +21,7 @@
                         Console.WriteLine("That is not a valid Choice");
                         break;
                 }
+                Console.WriteLine();
             } while (running);
 
 
@@ -56,6 +57,16 @@
                 Result[i + 1] += Added % 2;
                 carry = Added / 2;
             }
+            Result[0] = carry; // Store the final leftmost carry
+
+            // 5. Display the result
+            Console.WriteLine("Calculated Result = ");
+            Console.WriteLine();
+            for (int i = maxLength; i < Result.Length; i++)
+            {
+                Console.Write(Result[i]);
+            }
+            Console.WriteLine();
         }
 
     }
